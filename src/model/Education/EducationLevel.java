@@ -6,9 +6,13 @@ public enum EducationLevel {
     MST("Master"),
     PHD("Doctor of Philosophy");
 
-    protected String description;
+    private String description;
 
     EducationLevel(String description) {
         this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }

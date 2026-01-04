@@ -1,6 +1,6 @@
 package model.Experience;
 
-import model.Employee.IEmployee;
+import model.Employee.Employee;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -12,9 +12,10 @@ public class Experience implements IExperience{
     protected String companyName;
     protected LocalDate startDate;
     protected LocalDate endDate;
-    protected IEmployee employee;
+    protected Employee employee;
 
-    public Experience(int experienceId, String jobTitle, String position, String companyName, LocalDate startDate, LocalDate endDate, IEmployee employee) {
+    public Experience(int experienceId, String jobTitle, String position, String companyName,
+                      LocalDate startDate, LocalDate endDate, Employee employee) {
         this.experienceId = experienceId;
         this.jobTitle = jobTitle;
         this.position = position;
@@ -24,10 +25,31 @@ public class Experience implements IExperience{
         this.employee = employee;
     }
 
-    public void printExperience() {
-        DateTimeFormatter dateFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        System.out.printf("Title: %s, Position: %s, Company Name: %s, Start Date: %s, End Date: %s\n",
-                this.jobTitle, this.position, this.companyName, this.startDate.format(dateFormat), this.endDate.format(dateFormat)
-        );
+    public int getExperienceId() {
+        return experienceId;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public String getCompanyName() {
+        return companyName;
+    }
+
+    public LocalDate getStartDate() {
+        return startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public Employee getEmployee() {
+        return employee;
     }
 }

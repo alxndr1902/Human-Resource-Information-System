@@ -1,25 +1,39 @@
 package model.Competency;
 
-import model.Employee.IEmployee;
+import model.Employee.Employee;
 
-public class Competency implements ICompetency{
-    protected int competencyId;
-    protected String name;
-    protected ProficiencyType type;
-    protected int proficiencyLevel;
-    protected IEmployee employees;
+public class Competency {
+    private int id;
+    private String name;
+    private ProficiencyType proficiencyType;
+    private int proficiencyLevel;
+    private Employee employee;
 
-    public Competency(int competencyId, String name, ProficiencyType type, int proficiencyLevel, IEmployee employees) {
-        this.competencyId = competencyId;
+    public Competency(int id, String name, ProficiencyType proficiencyType, int proficiencyLevel, Employee employee) {
+        this.id = id;
         this.name = name;
-        this.type = type;
+        this.proficiencyType = proficiencyType;
         this.proficiencyLevel = proficiencyLevel;
-        this.employees = employees;
+        this.employee = employee;
     }
 
-    public void printCompetency() {
-        System.out.printf("Competency name:%s, Proficiency type: %s, Level: %d\n",
-                this.name, this.type, this.proficiencyLevel
-        );
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public ProficiencyType getProficiencyType() {
+        return proficiencyType;
+    }
+
+    public int getProficiencyLevel() {
+        return proficiencyLevel;
+    }
+
+    public Employee getEmployee() {
+        return employee;
     }
 }
