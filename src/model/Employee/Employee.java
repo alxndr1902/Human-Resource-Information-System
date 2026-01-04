@@ -8,22 +8,21 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class Employee {
-    protected int employeeId;
-    protected String firstName;
-    protected String lastName;
-    protected char gender;
-    protected LocalDate birthDate;
-    protected String birthPlace;
-    protected String idCardNumber;
-    protected LocalDate hireDate;
-    protected List<Education> educations;
-    protected List<Experience> experiences;
-    protected List<Competency> competencies;
+    private final int employeeId;
+    private final String firstName;
+    private final String lastName;
+    private final char gender;
+    private final LocalDate birthDate;
+    private final String birthPlace;
+    private final String idCardNumber;
+    private final LocalDate hireDate;
+    private final List<Education> educations;
+    private final List<Experience> experiences;
+    private final List<Competency> competencies;
 
     public Employee(int employeeId, String firstName, String lastName, char gender,
                     LocalDate birthDate, String birthPlace, String idCardNumber,
-                    LocalDate hireDate, List<Education> educations, List<Experience> experiences,
-                    List<Competency> competencies) {
+                    LocalDate hireDate, List<Education> educations, List<Experience> experiences, List<Competency> competencies) {
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -35,10 +34,6 @@ public class Employee {
         this.educations = educations;
         this.experiences = experiences;
         this.competencies = competencies;
-    }
-
-    public int getEmployeeId() {
-        return employeeId;
     }
 
     public String getFirstName() {
