@@ -19,12 +19,8 @@ public class MainView {
         String userChoice = InputUtil.scanString("Select Menu: ");
 
         switch (userChoice) {
-            case "1" -> {
-                employeeView.show(this::show);
-            }
-            case "2" -> {
-                System.out.println("Good bye!");
-            }
+            case "1" -> employeeView.show(this::show);
+            case "2" -> System.out.println("Good bye!");
             default -> {
                 System.out.println("Must input 1-2 only.");
                 this.show();
