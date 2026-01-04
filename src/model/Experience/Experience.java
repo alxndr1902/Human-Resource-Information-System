@@ -5,7 +5,7 @@ import model.Employee.Employee;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Experience implements IExperience{
+public class Experience{
     protected int experienceId;
     protected String jobTitle;
     protected String position;
